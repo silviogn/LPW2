@@ -1,0 +1,21 @@
+
+Exercícios de integralização da matéria  orientação a objetos: 
+
+- Programe uma classe Pessoa. Esta deve possuir os seguintes atributos : nome, código, endereço, cidade. 
+Como parte do comportamento da classe a mesma deve implementar os seguintes métodos: alterar nome, 
+alterar endereço, mostrar informações da pessoa.  Crie um teste para a sua classe e mostre o funcionamento. 
+ 
+- Programe uma classe Pessoa Jurídica. Esta deve ser filha da classe Pessoa. 
+Inclua os atributos CNPJ e número de funcionários. Sobrescreva o método mostrar 
+informações para que os novos atributos sejam incluídos e toda a informação da Pessoa Jurídica seja apresentada. 
+
+- Programe uma classe Pessoa Física. Esta deve ser filha da classe Pessoa. Inclua os atributos CPF, 
+número de filhos e tipo sanguíneo.  Sobrescreva o método mostrar informações para que os novos atributos 
+sejam incluídos e toda a informação da Pessoa Física seja apresentada.  
+
+Coding Challenge: O código de cada instancia da classe Pessoa ou das suas classes filhas deve ser único.
+Ou seja cada objeto criado possui um código único. Para isso crie uma propriedade estática e faça as alterações 
+necessárias para permitir este comportamento. 
+ 
+- Utilize o aprendido e exercitado em aula. Reaproveite o seu código, escreva o código o 
+mais abstrato possível. Não crie métodos extensos demais. Pense. Investigue.   

@@ -1,0 +1,65 @@
+Exercício 1: Implementação de Nota Fiscal
+
+Oi =). No nosso primeiro exercício implementaremos uma nota fiscal. Utilizaremos orientação a objetos assim como os demais conceitos e técnicas aprendidas em LPW1.
+
+Problema: o cliente da loja on-line vendotudo.com deseja implementar um sistema para realizar as vendas assim como a emissão da nota fiscal. O analista de sistemas da 
+empresa na qual você trabalha passou para você a seguinte especificação, que deve ser seguida para implementar a nota fiscal:
+
+A classe a ser implementada deve ser nomeada com o nome: NotaFiscal. 
+O arquivo que contém dita classe deverá receber o nome de NotaFiscal.php. 
+A classe dever conter as seguintes propriedades. 
+Código, Data, Nome do Cliente, Percentual de Desconto, Desconto, Subtotal, Total e os Itens 
+da Nota Fiscal. 
+
+
+ Cada item da Nota Fiscal deve guardar as seguintes 
+informações: Sequência do Item, Código do Produto, Nome do Produto, Quantidade, Preço e Valor
+ do Item. 
+
+
+ Métodos para adicionar um novo item, remover um item e um método 
+para imprimir a nota fiscal no navegador devem ser programados.
+
+Regras de negócio a serem respeitadas:
+•	Ao instanciar um objeto da nota fiscal o código, o nome do cliente e o percentual 
+de desconto devem ser fornecidos. Todos estes valores 
+são obrigatórios e devem conter valores válidos. Ou seja, 
+o código dever ser maior que zero e não pode ser nulo, 
+o nome não pode ser nulo nem valor vazio. 
+O percentual de desconto não pode ser nulo,  deve ser maior ou igual 
+a zero e menor ou igual a cinco. Caso o valor seja menor que zero ou maior do que cinco, 
+o valor padrão de desconto deve ser zero. A data dever ser atribuída automáticamente 
+pela classe.
+
+•	Ao incluir um novo item na nota fiscal o código do produto não pode 
+ser nulo nem menor ou igual a zero, o nome do produto não pode ser nulo nem possuir
+ valor em branco, a quantidade não pode ser nula nem igual ou menor 
+a zero, o preço não pode ser nulo nem igual ou menor a zero. O valor do item dever ser
+ calculado automaticamente pela classe.
+
+•	Ao incluir um novo item na nota fiscal deve ser verificado se algum item já inserido possui o mesmo Código do Produto do item que esta sendo inserido. 
+Caso exista, a Quantidade deve ser atualizada assim como o Valor do Item em base ao Preço incluído no item em questão (cálculo do valor do item é igual a preço 
+multiplicado pela quantidade). Caso não exista um novo item deve ser incluído.
+•	Ao incluir, excluir ou atualizar um item o Subtotal da nota dever ser calculado em base a soma do valor de todos os itens. O Desconto dever ser 
+calculado em base ao percentual de desconto sobre o Subtotal da nota. O Total da Nota é resultante de subtração do Subtotal menos o Desconto.
+•	Ao excluir um item dever validado se o valor da sequência do item não é um valor nulo e maior que zero. Caso seja um valor valido o item dever ser
+ excluído e os totais da nota recalculados.
+•	Impressão. Quando invocado o método Imprimir a mesma deverá ser impressa no navegador no seguinte formato:
+
+Código: 10001
+Data: 10/01/207 Cliente: José Da Silva	
+--------------------------------------------------------
+Produto 			Qtd	Preço 	Total
+--------------------------------------------------------
+1001 – Coca Cola 		1 	5        5.00
+1002 – Pepsi                    2	5	10.00		
+--------------------------------------------------------
+				Sub-Total	15.00
+				Desconto	 1.50
+				Total		13.50
+
+•	Todos os atributos da classe devem receber o valor null ao destuir a classe.
+•	Crie um outro arquivo PHP chamado NotaFiscalTest.php e escreva o de teste para demostrar que sua implementação funciona.
+
+Good job.
+

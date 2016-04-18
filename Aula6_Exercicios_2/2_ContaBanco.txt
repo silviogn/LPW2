@@ -1,0 +1,11 @@
+
+Disciplina: Linguagem de Programação Para Web II.
+Tema: Exercício OO.
+Resolva o seguinte exercício criando programas em PHP:
+
+- Exercício 1 – Conta Salário
+    o Uma conta salário possui número, agência, saldo, limite, um identificador se é especial ou não, um conjunto de transações.
+    o Um método para retirar valores da conta (debitar). Verifique se o valora ser retirado é menor ou igual ao saldo mais o limite informado.
+    o Um método para creditar valores da conta.
+    o Para cada movimentação na conta (credito ou débito), crie uma transação informando: o valor, o tipo e a descrição. 
+    o Um método para imprimir as informações da conta.
