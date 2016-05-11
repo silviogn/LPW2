@@ -12,11 +12,11 @@ class CalculadorFinanceiro {
 
     public function executarCalculo() {
         try {           
-           $this->cliente->CalcularDivida(90);
+           $this->cliente->CalcularDivida(90000000);
            print "sucesssooo"; 
         } catch (Exception $exc) {
-            //echo $exc->getTraceAsString();
-   
+            echo $exc->getTraceAsString();
+            
             print "Ocorreu um erro tente mais tarde";
         }
     }
