@@ -1,28 +1,17 @@
 <?php
 
-include_once './IAluno.php';
+include_once './AlunoAbstract.php';
 
-class AlunoExterno implements IAluno{
+class AlunoExterno extends AlunoAbstract{
     
-    private $nome;
-    private $responsavel;
+ 
     private $localizacao;
     
-    public function __construct($nome, $responsavel, $localizacao) {
-        $this->nome = $nome;
-        $this->responsavel = $responsavel;
+    public function __construct($localizacao) {
         $this->localizacao = $localizacao;
     }
 
-    public function getNome() {
-        return $this->nome;
-    }
-
-    public function setNome($nome) {
-        $this->nome = $nome;
-    }
-
-    public function setResponsavel($responsavel) {      
+    public function setResponsavel($responsavel) {
         if (empty($responsavel)) {
             exit("Responsavel inválido");
         }
