@@ -1,12 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-include_once './AlunoAbstract.php';
-
-class Aluno extends AlunoAbstract{
-    
-    
-=======
 include_once './IAluno.php';
 
 class Aluno implements IAluno{
@@ -23,7 +16,7 @@ class Aluno implements IAluno{
         $this->nome = $nome;
     }
 
->>>>>>> origin/master
+
     public function setResponsavel($responsavel) {
         $this->responsavel = $responsavel;
     }

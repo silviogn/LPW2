@@ -1,0 +1,23 @@
+
+1 - Abrir o arquivo php.ini 
+
+path = C:\xampp\php
+
+2 - Escolher o driver da base de dados desejada
+
+extension=php_pdo.dll
+extension=php_pdo_firebird.dll
+extension=php_pdo_informix.dll
+extension=php_pdo_mssql.dll
+extension=php_pdo_mysql.dll
+extension=php_pdo_oci.dll
+extension=php_pdo_oci8.dll
+extension=php_pdo_odbc.dll
+extension=php_pdo_pgsql.dll
+extension=php_pdo_sqlite.dll 
+
+
+3 - Link Base de Dados
+
+https://www.dropbox.com/s/9z7w5kwctmdmkha/Dump.rar?dl=0
+
