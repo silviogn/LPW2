@@ -27,7 +27,9 @@ $pacienteBl = new PacientesBl();
 
 
 if ($pacienteBl->VerifyDuplicatedDocument($paciente->getDocumento()) == 0){
-    $pacienteBl->Criar($paciente) == 1? print "Paciente Registrado com Sucesso": print "Erro ao Registrar o Paciente";
+    $pacienteBl->Criar($paciente) == 1? 
+            print "Paciente Registrado com Sucesso": 
+            print "Erro ao Registrar o Paciente";
     
 } else {
     

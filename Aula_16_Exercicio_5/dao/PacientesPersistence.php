@@ -9,7 +9,8 @@ class PacientePersistence extends Persistence {
         $parameters = array();
         $parameters[":documento"] = $document;
         $resultdo = $this->ExecuteQuery(
-                "SELECT COUNT(Id) Total FROM pacientes WHERE Documento = :documento", $parameters);
+                "SELECT COUNT(Id) Total FROM pacientes WHERE Documento = :documento", 
+                $parameters);
         return $resultdo[0][0];
     }
 
