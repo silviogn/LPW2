@@ -19,5 +19,15 @@ class PacientesBl {
         return $this->pacientePersistence->DocumentExists($document);
         
     }
+    
+    public function GetListaPacientes($filtro, $opcion) {
+        return $this->pacientePersistence->GetListaPacientes($filtro, $opcion);
+            
+    }
+    
+    public function GetPaciente($Id) {
+        return $this->pacientePersistence->GetPaciente($Id);
+    }
+    
 
 }

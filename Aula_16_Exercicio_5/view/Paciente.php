@@ -1,39 +1,52 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
+<script language="javascript">
+    function calculate()
+    {   
+        var nascimento = document.getElementsByName('nascimento');
+        var date = nascimento[0].value;
+        var born = new Date(date);
+        var today = new Date();
+        var age = today.getFullYear() - born.getFullYear();
+        document.getElementById('idade').value =  age;
+    }
+</script>
+
+
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Sistema Hospitalar</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
 
-        <form action="PacienteAction.php" method="post">
+        <form action="PacienteAction.php" name="formpaciente" method="post">
             <fieldset>
                 <legend>Cadastro de Paciente</legend>
 
                 Documento:<br>
-                <input type="text" name="documento"><br><br>
+                <input type="text" name="documento" required><br><br>
 
                 Nome:<br>
-                <input type="text" name="nome"><br><br>
+                <input type="text" name="nome" required><br><br>
 
                 Peso:<br>
-                <input type="text" name="peso"><br><br>
-                
-                Altura:<br>
-                <input type="text" name="altura"><br><br>
+                <input type="text" name="peso" required min="0" max="350"><br><br>
 
-                Nascimento<br>
-                <input type="date" name="nascimento"><br><br>
+                Altura:<br>
+                <input type="text" name="altura" required min="1" max="220"><br><br>
+
+                Nascimento:<br>
+                <input type="date" name="nascimento" required onblur="calculate()"><br><br>
+                
+                Idade:<br>
+                <input type="text" name="idade" id="idade" readonly="true"><br><br>
+                
 
                 Grupo sanguíneo<br>
-                <select name="tiposanguineo"> 
-                    <option value="0">--------</option>
+                <select required name="tiposanguineo" > 
+                    <option value="">--------</option>
                     <?php
                     print "aqui";
                     include_once '../business/TipoSanguineoBl.php';
@@ -45,8 +58,8 @@ and open the template in the editor.
                 </select>
                 <br><br>
 
-                <select name="sexo"> 
-                    <option value="0">--------</option>
+                <select required name="sexo"> 
+                    <option value="">--------</option>
                     <?php
                     include_once '../business/SexoBl.php';
                     $sexoBl = new SexoBl();
@@ -60,7 +73,7 @@ and open the template in the editor.
                 <textarea name="descricao"  rows="4" cols="50"></textarea><br><br>
 
 
-                <input type="submit" value="Gravar">
+                <input type="submit" value="Gravar"> <input type="reset" value="Limpar">
             </fieldset>
         </form>
 
