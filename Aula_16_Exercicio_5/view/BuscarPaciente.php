@@ -47,10 +47,10 @@
                     echo "<tr>";
                     echo "<td>{$res['Nome']}</td>";
                     echo "<td>{$res['Documento']}</td>";
-                    echo "<td>{$res['NomeSexo']}</td>";
-                    echo "<td>Alterar</td>";
+                    echo "<td>{$res['NomeSexo']}</td>";                    
+                    echo "<td><a href='PacienteAlterar.php?Id={$res['Id']}'>Alterar</a></td>";
                     echo "<td><a href='PacienteInfo.php?Id={$res['Id']}'>Info</a></td>";
-                    echo "<td>Delete</td>";
+                    echo "<td><a href='PacienteDelete.php?Id={$res['Id']}'>Delete</a></td>";
                     echo "</tr>";
                 }
             }

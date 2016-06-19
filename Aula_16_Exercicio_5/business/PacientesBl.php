@@ -14,6 +14,10 @@ class PacientesBl {
     public function Criar(Paciente $paciente) {
         return $this->pacientePersistence->Insert($paciente);
     }
+    
+    public function Alterar(Paciente $paciente) {
+        return $this->pacientePersistence->Alterar($paciente);
+    }
 
     public function VerifyDuplicatedDocument($document) {
         return $this->pacientePersistence->DocumentExists($document);
@@ -25,9 +29,12 @@ class PacientesBl {
             
     }
     
-    public function GetPaciente($Id) {
-        return $this->pacientePersistence->GetPaciente($Id);
+    public function GetPaciente($id) {
+        return $this->pacientePersistence->GetPaciente($id);
     }
     
-
+    public function Delete($id) {
+        return $this->pacientePersistence->Delete($id);
+    }
+    
 }

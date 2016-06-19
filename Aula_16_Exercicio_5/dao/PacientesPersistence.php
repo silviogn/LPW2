@@ -27,6 +27,35 @@ class PacientePersistence extends Persistence {
         $parameters[":Descricao"] = $paciente->getDescricao();
         return $this->ExecuteCommand($sql, $parameters);
     }
+    
+    
+    
+    public function Alterar(Paciente $paciente) {        
+        $sql = "UPDATE pacientes  SET Documento = :Documento, "
+                . "Nome = :Nome, Peso = :Peso, Nascimento = :Nascimento, Altura = :Altura, "
+                . "TipoSanguineo_Id = :TipoSanguineo_Id, Sexo_Id = :Sexo_Id, Descricao = :Descricao WHERE Id = :Id";
+        $parameters = array();
+        $parameters[":Id"] = $paciente->getId();
+        $parameters[":Documento"] = $paciente->getDocumento();
+        $parameters[":Nome"] = $paciente->getNome();
+        $parameters[":Peso"] = $paciente->getPeso();
+        $parameters[":Nascimento"] = $paciente->getNascimento();
+        $parameters[":Altura"] = $paciente->getAltura();
+        $parameters[":TipoSanguineo_Id"] = $paciente->getTipoSanguineo_Id();
+        $parameters[":Sexo_Id"] = $paciente->getSexo_Id();
+        $parameters[":Descricao"] = $paciente->getDescricao();        
+        return $this->ExecuteCommand($sql, $parameters);
+    }
+    
+    
+    public function Delete($id) {
+        $sql = "DELETE FROM  pacientes WHERE Id = :Id";
+        $parameters = array();
+        $parameters[":Id"] = $id;        
+        return $this->ExecuteCommand($sql, $parameters);
+    }
+    
+    
 
     public function GetListaPacientes($filtro, $opcion) {
 
@@ -47,10 +76,10 @@ class PacientePersistence extends Persistence {
     }
 
     public function GetPaciente($Id) {
-        $sql = "SELECT Pacientes.Documento,Pacientes.Nome,"
+        $sql = "SELECT Pacientes.Id,Pacientes.Documento,Pacientes.Nome,"
                 . "Pacientes.Peso,Pacientes.Altura,Pacientes.Nascimento,"
                 . "Pacientes.Descricao,Sexo.Nome NomeSexo,TipoSanguineo.Nome  "
-                . "NomeTipoSanguineo FROM Pacientes "
+                . "NomeTipoSanguineo, TipoSanguineo.Id IdTipoSanguineo, Sexo.Id IdSexo FROM Pacientes "
                 . " INNER JOIN Sexo ON Sexo.Id = Pacientes.Sexo_Id   "
                 . "INNER JOIN TipoSanguineo "
                 . "ON TipoSanguineo.Id = Pacientes.TipoSanguineo_Id "
