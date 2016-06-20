@@ -40,34 +40,35 @@ if (isset($_GET['Id'])) {
                     
 
                 Grupo sanguíneo<br>
-                <select required name="tiposanguineo" >                     
-                    <?php
-                    print "aqui";
+                <select required name="tiposanguineo" id="tiposanguineo" >                     
+                    <?php                    
                     include_once '../business/TipoSanguineoBl.php';
                     $tipoSanguineoBl = new TipoSanguineoBl();
                     foreach ($tipoSanguineoBl->GetAll() as $tipo) {
                         print "<option value=" . $tipo['Id'];  
-                        if ($result[0]['IdTipoSanguineo'] == $tipo['Id']) 
+                        if ($result[0]['IdTipoSanguineo'] == $tipo['Id']) {
                             print "selected";
-                            print  ">";
-                            print $tipo['Nome'];                         
-                          print "  </option>";
+                        }
+                        print  ">";
+                        print $tipo['Nome'];                         
+                        print "  </option>";
                     }
                     ?>
                 </select>
                 <br><br>
                 
-                <select required name="sexo"> 
+                <select required name="sexo" id="sexo"> 
                     <?php
                     include_once '../business/SexoBl.php';
                     $sexoBl = new SexoBl();
                     foreach ($sexoBl->GetAll() as $tipo) {
                         print "<option value=" . $tipo['Id'];  
-                        if ($result[0]['IdSexo'] == $tipo['Id']) 
+                        if ($result[0]['IdSexo'] == $tipo['Id']) {
                             print "selected";
-                            print  ">";
-                            print $tipo['Nome'];                         
-                          print "  </option>";
+                        }
+                        print  ">";
+                        print $tipo['Nome'];                         
+                        print "  </option>";
                     }
                     ?>
                 </select>

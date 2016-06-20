@@ -12,6 +12,14 @@ class PacientePersistence extends Persistence {
                 "SELECT COUNT(Id) Total FROM pacientes WHERE Documento = :documento", $parameters);
         return $resultdo[0][0];
     }
+    
+    public function DocumentExistsUpdate($document,$id) {
+        $parameters = array();
+        $parameters[":documento"] = $document;        
+        $sql = "SELECT COUNT(Id) Total FROM pacientes WHERE Documento = :documento AND Id <> {$id}";        
+        $resultdo = $this->ExecuteQuery($sql,$parameters);
+        return $resultdo[0][0];
+    }
 
     public function Insert(Paciente $paciente) {
         $sql = "INSERT INTO pacientes(Documento,Nome,Peso,Nascimento,Altura,TipoSanguineo_Id,Sexo_Id, Descricao) "

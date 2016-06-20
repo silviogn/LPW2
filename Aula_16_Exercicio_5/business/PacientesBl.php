@@ -24,6 +24,12 @@ class PacientesBl {
         
     }
     
+    public function VerifyDuplicatedDocumentUpdate($document,$id) {
+        return $this->pacientePersistence->DocumentExistsUpdate($document,$id);
+        
+    }
+    
+    
     public function GetListaPacientes($filtro, $opcion) {
         return $this->pacientePersistence->GetListaPacientes($filtro, $opcion);
             

@@ -29,7 +29,7 @@ $paciente->setAltura($altura);
 $pacienteBl = new PacientesBl();
 
 
-if ($pacienteBl->VerifyDuplicatedDocument($paciente->getDocumento()) == 0){
+if ($pacienteBl->VerifyDuplicatedDocumentUpdate($paciente->getDocumento(),$paciente->getId()) == 0){
     $pacienteBl->Alterar($paciente) == 1? 
             print "Paciente Alterado com Sucesso": 
             print "Erro ao Registrar o Paciente";
