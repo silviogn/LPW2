@@ -1,6 +1,6 @@
 <?php
 
-class Produto {
+class Produto2 {
     
     public $Codigo;
     public $Descricao;

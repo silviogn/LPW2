@@ -1,0 +1,17 @@
+
+LPW 2 – Exercício1 – Orientação a Objetos
+
+1.Crie uma classe em PHP que contenha o Código, Nome, Endereço e Telefone de um determinado Cliente. 
+Crie um método para imprimir as informações do mesmo. 
+
+2.Programe uma classe que guarde o CPF, Nome e nome dos dependentes de uma determinada Pessoa. 
+Utilize o construtor para inicializar os valores para o CPF e para o Nome. 
+Desenvolva um método para incluir um novo dependente. Crie um método para excluir um dependente. 
+Programe um método para apresentar as informações da pessoa além dos dependentes. 
+Programe o destrutor para liberar os recursos.
+
+3.Desenvolva uma classe chamada Conta Corrente. A classe deve guardar os seguintes dados. 
+Número da conta , agencia, saldo, cpf e nome do dono da conta. Devem também ser guardados os lançamentos realizados. 
+Cada lançamento deve guardar o identificador do lançamento, o valor, a data e a informação se este é credito C ou debito D.  
+A classe deve suportar incluir um novo lançamento além excluir um lançamento já registrado. 
+A cada movimento realizado na conta o saldo deve ser atualizado.

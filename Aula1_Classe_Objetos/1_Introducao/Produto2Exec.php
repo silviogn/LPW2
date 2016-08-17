@@ -1,12 +1,10 @@
 <?php
 
-include_once './Produto.php';
+include_once './Produto2.php';
 
-$produto = new Produto();
+$produto = new Produto2();
 $produto->Codigo = 900;
 $produto->Descricao = "Pizza";
-$produto->Preco = 44.50;
-$produto->Quantidade = 90;
   
 $produto->ImprimeEtiqueta();
 

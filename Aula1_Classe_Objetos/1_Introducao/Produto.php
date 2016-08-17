@@ -7,5 +7,4 @@ class Produto {
     public $Preco;
     public $Quantidade;
     
-    
 }

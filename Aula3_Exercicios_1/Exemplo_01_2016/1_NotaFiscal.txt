@@ -58,8 +58,8 @@ Produto 			Qtd	Preço 	Total
 				Desconto	 1.50
 				Total		13.50
 
-•	Todos os atributos da classe devem receber o valor null ao destuir a classe.
-•	Crie um outro arquivo PHP chamado NotaFiscalTest.php e escreva o de teste para demostrar que sua implementação funciona.
+• Todos os atributos da classe devem receber o valor null ao destuir a classe.
+• Crie um outro arquivo PHP chamado NotaFiscalTest.php e escreva o de teste para demostrar que sua implementação funciona.
 
 Good job.
 
