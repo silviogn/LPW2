@@ -1,6 +1,6 @@
 <?php
 
-$diretorio = "/Applications/XAMPP/xamppfiles/htdocs/LPW2/Aula_18_Upload_Files/Uploads/";
+$diretorio = "/Applications/XAMPP/htdocs/LPW2/Aula_18_Upload_Files/Uploads/";
 $arquivo = $diretorio . basename($_FILES["fileToUpload"]["name"]);
 
 if(isset($_POST["submit"])) {
